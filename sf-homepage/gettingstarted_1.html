@@ -111,7 +111,14 @@
 <div id="link_tag" class="block highlighter">
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="js-graph-it.css"&gt;</div>
 	&nbsp;&nbsp;&lt;/head&gt;<br>
-	&nbsp;&nbsp;&lt;body <span id="body_tag" class="block highlighter">onload="initPageObjects();"</span>&gt;<br>
+	&nbsp;&nbsp;&lt;body&gt;<br>
+
+	&nbsp;&nbsp;&lt;script&gt;<br>
+	<span id="body_tag" class="block highlighter">
+	&nbsp;&nbsp;window.onload = function(){		initPageObjects();		}
+	</span><br>
+	&nbsp;&nbsp;&lt;/script&gt;<br>
+
 	&nbsp;&nbsp;&lt;/body&gt;<br>
 	&lt;/html&gt;
 </div>
@@ -133,8 +140,8 @@ to work properly is <code>js-graph-it.css</code>, this must be declared this way
 
 <p id="body_tag_descr" class="block draggable" style="width: 200px; top: 355px; left:215px;">
 In order to activate <dfn>js-graph-it</dfn>, the only javascript code required is the invocation of the
-function <code>initPageObjects()</code>. Place it into the <code>onload</code> attribute of the <code>body</code>
-tag.
+function <code>initPageObjects()</code>. Place it into the <code>onload</code> attribute of the <code>window</code>
+object, inside your script.
 </p>
 
 <div class="connector body_tag_descr body_tag">
