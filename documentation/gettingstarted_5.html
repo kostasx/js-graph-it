@@ -4,8 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>js-graph.it homepage</title>
-<script type="text/javascript" src="js-graph-it.js"></script>
-<link rel="stylesheet" type="text/css" href="js-graph-it.css" />
+<script type="text/javascript" src="../js/js-graph-it.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/js-graph-it.css" />
 <link rel="stylesheet" type="text/css" href="sf-homepage.css" />
 <style>
 	
@@ -96,104 +96,65 @@
 
 <h1 id="title_block" class="block draggable" style="left: 30px; top: 20px;">Getting started</h1>
 
-<h2 id="subtitle_block" class="block draggable" style="left: 280px; top: 40px; padding-left: 10px; padding-right: 10px; width: 550px;">The blocks</h2>
+<h2 id="subtitle_block" class="block draggable" style="left: 280px; top: 40px; padding-left: 10px; padding-right: 10px; width: 550px;">Drag and drop</h2>
 
 <div class="connector title_block subtitle_block">
-	<img class="connector-end" src="arrow.gif">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
 <div id="code" class="block code" style="left: 280px; top: 100px; padding: 10px; width: 550px; position: absolute; background-color: white;">
 	&lt;html&gt;<br>
 	&nbsp;&nbsp;&lt;head&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;script type="text/javascript" src="../js-graph-it.js"&gt;&lt;/script&gt;<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="../js-graph-it.css"&gt;
-<div id="style_tag" class="block highlighter">
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="../js-graph-it.css"&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.block { position: absolute; }<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;
-</div>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
 	&nbsp;&nbsp;&lt;/head&gt;<br>
 	&nbsp;&nbsp;&lt;body onload="initPageObjects();"&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="canvas" id="mainCanvas"<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="width: 350px; height: 250px; border: 1px solid black;"&gt;<br>
 
-<div id="block1_tag" class="block highlighter">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 <span class="highlighter block" id="block1_class">class="block"</span> <span id="block1_id" class="highlighter block">id="h1_block"</span><br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="<span class="highlighter block" id="block1_size">left: 10px; top:10px;</span>"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="block <span class="highlighter block" id="draggable_class_1">draggable</span>" id="h1_block"<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="left: 10px; top: 10px;"&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 block<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;</div>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;<br>
 
-<div id="block2_tag" class="block highlighter">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="block" id="h2_block"<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="block <span class="highlighter block" id="draggable_class_2">draggable</span>" id="h2_block"<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="left: 200px; top: 100px;"&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h2 block<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h2&gt;
-</div>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h2&gt;<br>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="connector h1_block h2_block"&gt;&lt;/div&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
 	&nbsp;&nbsp;&lt;/body&gt;<br>
 	&lt;/html&gt;
 </div>
 
-<div class="block draggable" id="style_descr" style="width: 200px; top: 100px; left: 10px;">
-<p>Absolute positioning is not required for <dfn>js-graph-it</dfn> to work, hence, we must explicitly declare
-that we want the blocks to be placed in an absolute position within the canvas.</p>
-<p>This can be done declaring that the <code>block</code> class has absolute positioning in a style section, 
-into an external css file or in the style attribute of each block.</p>
-</div>
-
-<div class="connector style_descr style_tag">
-	<img class="connector-end" src="arrow.gif">
-</div>
-
-<div class="block draggable" id="block1_descr" style="width: 200px; top: 270px; left: 10px;">
-<p>Any html element within a canvas can be a block and can be connected with other blocks.
-In this sample we place a <code>h1</code> element into the page as the first block.</p>
-</div>
-
-<div class="connector block1_descr block1_tag">
-	<img class="connector-end" src="arrow.gif">
-</div>
-
-<p class="block draggable" id="block1_class_descr" style="width: 200px; top: 364px; left: 20px;">
-To declare that our <code>h1</code> element is a block, add the <code>block</code> class to it.
+<p class="block draggable" id="draggable_class_descr" style="width: 200px; top: 309px; left: 30px;">
+Activating drag and drop on the blocks is very simple: just add the <code>draggable</code> class to them.
 </p>
 
-<div class="connector block1_class_descr block1_class">
-	<img class="connector-end" src="arrow.gif">
+<div class="connector draggable_class_descr draggable_class_1">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
-<p class="block draggable" id="block1_id_descr" style="width: 200px; top: 520px; left: 610px;">
-A unique id is required and we will use it to refer to the block.
-</p>
-
-<div class="connector block1_id_descr block1_id">
-	<img class="connector-end" src="arrow.gif">
+<div class="connector draggable_class_descr draggable_class_2">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
-<div class="block draggable" id="block1_size_descr" style="width: 200px; top: 520px; left: 315px;">
-<p>Since we specified absolute positioning for blocks, we need to set the top left corner coordinates for the 
-<code>h1</code> element.</p>
-<p><strong>Note: the <code>top</code> and <code>left</code> styles values for a block are considered relative to 
-the top left corner of the canvas.</strong></p>
-</div>
-
-<div class="connector block1_size_descr block1_size">
-	<img class="connector-end" src="arrow.gif">
-</div>
-
-<p class="block draggable" id="block2_descr" style="width: 200px; top: 450px; left: 20px;">
-A second block is a <code>h2</code> element.
-</p>
-
-<div class="connector block2_descr block2_tag">
-	<img class="connector-end" src="arrow.gif">
+<div class="block draggable" id="draggable_class_descr" style="width: 200px; top: 500px; left: 30px;">
+<p>The <code>draggable</code> class can be applied to any element in an html page... A little bonus that
+comes with <dfn>js-graph-it</dfn>.</p>
+<p>Just a note: draggable elements must have absolute positioning and
+they cannot be dragged outside the bounds of their parent element (as it happens with the canvas).</p>
 </div>
 
 <div class="block draggable" style="bottom: 10px; right: 130px; width: 80px;">
-	<a href="gettingstarted_2.html">&laquo; previous</a></div>
+	<a href="gettingstarted_4.html">&laquo; previous</a></div>
 
 <div class="block draggable" style="bottom: 10px; right: 30px; width: 80px; text-align: right;">
-	<a href="gettingstarted_4.html">next &raquo;</a></div>
+	<a href="gettingstarted_6.html">next &raquo;</a></div>
 				</div>
 			</td>
 		</tr>

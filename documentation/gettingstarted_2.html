@@ -4,8 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>js-graph.it homepage</title>
-<script type="text/javascript" src="js-graph-it.js"></script>
-<link rel="stylesheet" type="text/css" href="js-graph-it.css" />
+<script type="text/javascript" src="../js/js-graph-it.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/js-graph-it.css" />
 <link rel="stylesheet" type="text/css" href="sf-homepage.css" />
 <style>
 	
@@ -96,11 +96,10 @@
 
 <h1 id="title_block" class="block draggable" style="left: 30px; top: 20px;">Getting started</h1>
 
-<h2 id="subtitle_block" class="block draggable" 
-style="left: 280px; top: 40px; padding-left: 10px; padding-right: 10px; width: 550px;">The connector</h2>
+<h2 id="subtitle_block" class="block draggable" style="left: 280px; top: 40px; padding-left: 10px; padding-right: 10px; width: 550px;">The canvas</h2>
 
 <div class="connector title_block subtitle_block">
-	<img class="connector-end" src="arrow.gif">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
 <div id="code" class="block code" style="left: 280px; top: 100px; padding: 10px; width: 550px; position: absolute; background-color: white;">
@@ -108,71 +107,61 @@ style="left: 280px; top: 40px; padding-left: 10px; padding-right: 10px; width: 5
 	&nbsp;&nbsp;&lt;head&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;script type="text/javascript" src="../js-graph-it.js"&gt;&lt;/script&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="../js-graph-it.css"&gt;<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.block { position: absolute; }<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
 	&nbsp;&nbsp;&lt;/head&gt;<br>
-	&nbsp;&nbsp;&lt;body onload="initPageObjects();"&gt;<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="canvas" id="mainCanvas"<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="width: 350px; height: 250px; border: 1px solid black;"&gt;<br>
+	&nbsp;&nbsp;&lt;body onload="initPageObjects();"&gt;
 
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="block" id="h1_block"<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="left: 10px; top: 10px;"&gt;<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 block<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;<br>
-
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="block" id="h2_block"<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="left: 200px; top: 100px;"&gt;<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h2 block<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h2&gt;
-<div class="highlighter block" id="connector_tag">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<span class="highlighter block" id="connector_class">connector</span> <span class="highlighter block" id="connector_source">h1_block</span> <span class="highlighter block" id="connector_dest">h2_block</span>"&gt;&lt;/div&gt;
-</div>	
-	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-	&nbsp;&nbsp;&lt;/body&gt;<br>
+<div id="canvas_tag" class="block highlighter">
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span id="canvas_class" class="highlighter block">class="canvas"</span> 
+	<span id="canvas_id" class="highlighter block">id="mainCanvas"</span><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="<span id="canvas_size" class="highlighter block">width: 350px; height: 250px;</span> border: 1px solid black;"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+</div>
+  	&nbsp;&nbsp;&lt;/body&gt;<br>
 	&lt;/html&gt;
 </div>
 
-<div class="block draggable" id="connector_tag_descr" style="width: 200px; top: 100px; left: 10px;">
-A connector is declared using an html element of any kind. Just for the sake of clarity, I prefer using 
-<code>div</code> elements because <dfn>js-graph-it</dfn> translates the connector definition element in
-a "chain" of <code>div</code> elements.
+<div id="canvas_descr" class="block draggable" style="width: 200px; top: 100px; left:10px;">
+<p>Now we need to declare an element that contains the graph, such an element is called a <i>canvas</i>
+and can be a html <code>body</code> or <code>div</code> element.
+This means that you can use either the entire page or one or more sections of it as canvases.</p>
+<p>Canvases have particular behaviours, e.g. the absolute positioning of the inner elements, hence, using the
+body element as canvas is only recommended if the whole page is actually a graph.</p>
+<p>In our example we will place a <code>div</code> element in the page as the canvas:</p>
 </div>
 
-<div class="connector connector_tag_descr connector_tag">
-	<img class="connector-end" src="arrow.gif">
+<div class="connector canvas_descr canvas_tag">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
-<p class="block draggable" id="connector_class_descr" style="width: 200px; top: 450px; left: 20px;">
-To declare that our <code>div</code> is a connector, we add the <code>connector</code> css class to it.
+<p id="canvas_class_descr" class="block draggable" style="width: 200px; top: 380px; left:40px;">
+A canvas is identified by the <code>canvas</code> css class.
 </p>
 
-<div class="connector connector_class_descr connector_class up_end">
-	<img class="connector-end" src="arrow.gif">
+<div class="connector canvas_class_descr canvas_class">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
-<p class="block draggable" id="connector_source_descr" style="width: 200px; top: 560px; left: 150px;">
-Now we have to specify the blocks to be connected. Let's start, adding the id of the source block as a
-css class.
+<p id="canvas_id_descr" class="block draggable" style="width: 200px; top: 350px; left:600px;">
+It is also required that a canvas has a unique id declared.
 </p>
 
-<div class="connector connector_source_descr connector_source up_end">
-	<img class="connector-end" src="arrow.gif">
+<div class="connector canvas_id_descr canvas_id">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
-<p class="block draggable" id="connector_dest_descr" style="width: 160px; top: 560px; left: 400px;">
-Then, add the id of the destination block as a third css class.
+<p id="canvas_size_descr" class="block draggable" style="width: 200px; top: 400px; left:340px;">
+Since the content of the canvas will probably have absolute positioning, it is strongly recommended
+to set the dimensions for the element. The canvas' content won't change it's external size.
 </p>
 
-<div class="connector connector_dest_descr connector_dest up_end right_start">
-	<img class="connector-end" src="arrow.gif">
+<div class="connector canvas_size_descr canvas_size">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
-
 <div class="block draggable" style="bottom: 10px; right: 130px; width: 80px;">
-	<a href="gettingstarted_3.html">&laquo; previous</a></div>
+	<a href="gettingstarted_1.html">&laquo; previous</a></div>
 
 <div class="block draggable" style="bottom: 10px; right: 30px; width: 80px; text-align: right;">
-	<a href="gettingstarted_5.html">next &raquo;</a></div>
+	<a href="gettingstarted_3.html">next &raquo;</a></div>
 				</div>
 			</td>
 		</tr>

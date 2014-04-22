@@ -2,8 +2,8 @@
  * browser detection *
  *********************/
 
-var ie=document.all;
-var nn6=document.getElementById&&!document.all;
+var ie  = document.all;
+var nn6 = document.getElementById && !document.all;
 
 /****************************************************
  * This class is a scanner for the visitor pattern. *
@@ -244,7 +244,7 @@ function Canvas(htmlElement)
 
 	// create the inner div element
 	this.innerDiv = document.createElement("div");
-	
+
 	this.initCanvas = function()
 	{
 		// setup the inner div
@@ -1183,7 +1183,7 @@ var canvases = new Array();
  */
 function initPageObjects()
 {
-	if(isCanvas(document.body))
+	if( isCanvas( document.body ) )
 	{
 		var newCanvas = new Canvas(document.body);
 		newCanvas.initCanvas();

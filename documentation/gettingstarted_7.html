@@ -4,8 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>js-graph.it homepage</title>
-<script type="text/javascript" src="js-graph-it.js"></script>
-<link rel="stylesheet" type="text/css" href="js-graph-it.css" />
+<script type="text/javascript" src="../js/js-graph-it.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/js-graph-it.css" />
 <link rel="stylesheet" type="text/css" href="sf-homepage.css" />
 <style>
 	
@@ -96,10 +96,11 @@
 
 <h1 id="title_block" class="block draggable" style="left: 30px; top: 20px;">Getting started</h1>
 
-<h2 id="subtitle_block" class="block draggable" style="left: 280px; top: 40px; padding-left: 10px; padding-right: 10px; width: 550px;">Drag and drop</h2>
+<h2 id="subtitle_block" class="block draggable" 
+style="left: 280px; top: 40px; padding-left: 10px; padding-right: 10px; width: 550px;">The connector's labels</h2>
 
 <div class="connector title_block subtitle_block">
-	<img class="connector-end" src="arrow.gif">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
 <div id="code" class="block code" style="left: 280px; top: 100px; padding: 10px; width: 550px; position: absolute; background-color: white;">
@@ -115,46 +116,95 @@
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="canvas" id="mainCanvas"<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="width: 350px; height: 250px; border: 1px solid black;"&gt;<br>
 
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="block <span class="highlighter block" id="draggable_class_1">draggable</span>" id="h1_block"<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="block draggable" id="h1_block"<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="left: 10px; top: 10px;"&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 block<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;<br>
 
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="block <span class="highlighter block" id="draggable_class_2">draggable</span>" id="h2_block"<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="block draggable" id="h2_block"<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="left: 200px; top: 100px;"&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h2 block<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h2&gt;<br>
 
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="connector h1_block h2_block"&gt;&lt;/div&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="connector h1_block h2_block"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="../img/arrow.gif" class="connector-start"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="../img/arrow.gif" class="connector-end"&gt;
+<div class="highlighter block" id="source_label">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label 
+	<span class="highlighter block" id="source_class">class="source-label"</span>&gt;start&lt;/label&gt;
+</div>
+<div class="highlighter block" id="middle_label">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label 
+    <span class="highlighter block" id="middle_class">class="middle-label"</span>&gt;middle&lt;/label&gt;
+</div>
+<div class="highlighter block" id="destination_label">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label 
+    <span class="highlighter block" id="destination_class">class="destination-label"</span>&gt;end&lt;/label&gt;
+</div>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
 	&nbsp;&nbsp;&lt;/body&gt;<br>
 	&lt;/html&gt;
 </div>
 
-<p class="block draggable" id="draggable_class_descr" style="width: 200px; top: 309px; left: 30px;">
-Activating drag and drop on the blocks is very simple: just add the <code>draggable</code> class to them.
-</p>
-
-<div class="connector draggable_class_descr draggable_class_1">
-	<img class="connector-end" src="arrow.gif">
+<div class="block draggable" id="labels_descr" style="width: 200px; top: 100px; left: 30px;">
+The task now is to add labels on the connector. It is possible to add 3 labels on each connector:
+<ul>
+	<li>the source label, anchored near the source block</li>
+	<li>the middle label, anchored in the middle of the connector</li>
+	<li>the destination label, anchored near the destination block</li>
+</ul>
 </div>
 
-<div class="connector draggable_class_descr draggable_class_2">
-	<img class="connector-end" src="arrow.gif">
+<div class="block draggable" id="tags_descr" style="width: 200px; top: 420px; left: 30px;">
+A connector label can be any html element nested in the connector element.
+In this sample we'll use three <code>label</code> elements (just because of the element's name).
 </div>
 
-<div class="block draggable" id="draggable_class_descr" style="width: 200px; top: 500px; left: 30px;">
-<p>The <code>draggable</code> class can be applied to any element in an html page... A little bonus that
-comes with <dfn>js-graph-it</dfn>.</p>
-<p>Just a note: draggable elements must have absolute positioning and
-they cannot be dragged outside the bounds of their parent element (as it happens with the canvas).</p>
+<div class="connector tags_descr source_label">
+	<img class="connector-end" src="../img/arrow.gif">
+</div>
+
+<div class="connector tags_descr middle_label">
+	<img class="connector-end" src="../img/arrow.gif">
+</div>
+
+<div class="connector tags_descr destination_label">
+	<img class="connector-end" src="../img/arrow.gif">
+</div>
+
+<div class="block draggable" id="source_class_descr" style="width: 200px; top: 550px; left: 30px;">
+To declare that an element must be used as the source label, we add the <code>source-label</code>
+css class to it.
+</div>
+
+<div class="connector source_class_descr source_class">
+	<img class="connector-end" src="../img/arrow.gif">
+</div>
+
+<div class="block draggable" id="middle_class_descr" style="width: 200px; top: 640px; left: 80px;">
+To declare that an element must be used as the middle label, we add the <code>middle-label</code>
+css class to it.
+</div>
+
+<div class="connector middle_class_descr middle_class">
+	<img class="connector-end" src="../img/arrow.gif">
+</div>
+
+<div class="block draggable" id="destination_class_descr" style="width: 200px; top: 730px; left: 130px;">
+Finally, to declare that an element must be used as the destination label, we use the <code>destination-label</code>
+css class.
+</div>
+
+<div class="connector destination_class_descr destination_class">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
 <div class="block draggable" style="bottom: 10px; right: 130px; width: 80px;">
-	<a href="gettingstarted_4.html">&laquo; previous</a></div>
+	<a href="gettingstarted_6.html">&laquo; previous</a></div>
 
 <div class="block draggable" style="bottom: 10px; right: 30px; width: 80px; text-align: right;">
-	<a href="gettingstarted_6.html">next &raquo;</a></div>
+	<a href="gettingstarted_8.html">next &raquo;</a></div>
 				</div>
 			</td>
 		</tr>

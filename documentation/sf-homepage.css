@@ -14,7 +14,7 @@ div.canvas
 {
 	border: 1px solid #262A37;
 	background-color: white;
-	background-image: url('gradient.jpg');
+	background-image: url('../img/gradient.jpg');
 	background-repeat: no-repeat;
 	background-position: top right;
 	padding: 0px;	

@@ -1,0 +1,15 @@
+.canvas {
+  font-family: tahoma;
+}
+.block {
+  position: absolute;
+  border: 1px solid #7DAB76;
+  background-color: #E0E8FF;
+  padding: 3px;
+}
+.connector {
+  background-color: #FF9900;
+}
+.source-label, .middle-label, .destination-label {
+  padding: 5px;
+}

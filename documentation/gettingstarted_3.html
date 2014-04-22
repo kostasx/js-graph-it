@@ -4,8 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>js-graph.it homepage</title>
-<script type="text/javascript" src="js-graph-it.js"></script>
-<link rel="stylesheet" type="text/css" href="js-graph-it.css" />
+<script type="text/javascript" src="../js/js-graph-it.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/js-graph-it.css" />
 <link rel="stylesheet" type="text/css" href="sf-homepage.css" />
 <style>
 	
@@ -96,113 +96,104 @@
 
 <h1 id="title_block" class="block draggable" style="left: 30px; top: 20px;">Getting started</h1>
 
-<h2 id="subtitle_block" class="block draggable" 
-style="left: 280px; top: 40px; padding-left: 10px; padding-right: 10px; width: 550px;">The connector's ends</h2>
+<h2 id="subtitle_block" class="block draggable" style="left: 280px; top: 40px; padding-left: 10px; padding-right: 10px; width: 550px;">The blocks</h2>
 
 <div class="connector title_block subtitle_block">
-	<img class="connector-end" src="arrow.gif">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
 <div id="code" class="block code" style="left: 280px; top: 100px; padding: 10px; width: 550px; position: absolute; background-color: white;">
 	&lt;html&gt;<br>
 	&nbsp;&nbsp;&lt;head&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;script type="text/javascript" src="../js-graph-it.js"&gt;&lt;/script&gt;<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="../js-graph-it.css"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="../js-graph-it.css"&gt;
+<div id="style_tag" class="block highlighter">
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.block { position: absolute; }<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;
+</div>
 	&nbsp;&nbsp;&lt;/head&gt;<br>
 	&nbsp;&nbsp;&lt;body onload="initPageObjects();"&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="canvas" id="mainCanvas"<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="width: 350px; height: 250px; border: 1px solid black;"&gt;<br>
 
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="block draggable" id="h1_block"<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="left: 10px; top: 10px;"&gt;<br>
+<div id="block1_tag" class="block highlighter">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 <span class="highlighter block" id="block1_class">class="block"</span> <span id="block1_id" class="highlighter block">id="h1_block"</span><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="<span class="highlighter block" id="block1_size">left: 10px; top:10px;</span>"&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 block<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;</div>
 
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="block draggable" id="h2_block"<br>
+<div id="block2_tag" class="block highlighter">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="block" id="h2_block"<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="left: 200px; top: 100px;"&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h2 block<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h2&gt;<br>
-
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="connector h1_block h2_block"&gt;
-<div class="highlighter block" id="start_tag">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="highlighter block" id="src_1">src="arrow.gif"</span> class="<span class="highlighter block" id="start_class">connector-start</span>"&gt;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h2&gt;
 </div>
-<div class="highlighter block" id="end_tag">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="highlighter block" id="src_2">src="arrow.gif"</span> class="<span class="highlighter block" id="end_class">connector-end</span>"&gt;
-</div>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
 	&nbsp;&nbsp;&lt;/body&gt;<br>
 	&lt;/html&gt;
 </div>
 
-<div class="block draggable" id="images_descr" style="width: 200px; top: 100px; left: 30px;">
-<p>It is possible to add an image at each end of a connector to give it an "arrow" style. To do this, we first
-have to create 5 images because there is no way to rotate an image using javascript.</p>
-<p>The first image must be the original one, this is needed because otherwise the browser can hang searching
-for it. The other 4 images must be the ones to use in each of the four directions and the 4 files must be
-named as the original image with the suffixes "_u", "_d", "_l", "_r" standing for "up", "down", "left" and "right"
-appended to the file name (<strong>not the extension!</strong>).</p>
+<div class="block draggable" id="style_descr" style="width: 200px; top: 100px; left: 10px;">
+<p>Absolute positioning is not required for <dfn>js-graph-it</dfn> to work, hence, we must explicitly declare
+that we want the blocks to be placed in an absolute position within the canvas.</p>
+<p>This can be done declaring that the <code>block</code> class has absolute positioning in a style section, 
+into an external css file or in the style attribute of each block.</p>
 </div>
 
-<div class="block draggable" id="images_descr_2" style="width: 200px; top: 380px; left: 30px;">
-The image we will use in this sample is named "arrow.gif", then the four files to be provided must be:
-<ol>
-	<li>arrow.gif</li>
-	<li>arrow_u.gif</li>
-	<li>arrow_d.gif</li>
-	<li>arrow_l.gif</li>
-	<li>arrow_r.gif</li>
-</ol>
-You can copy these files from this tutorial.
+<div class="connector style_descr style_tag">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
-<p class="block draggable" id="img_tag_descr" style="width: 200px; top: 560px; left: 30px;">
-Ones the image files have been provided, we can add the connector's ends by adding two <code>img</code>
-elements.
+<div class="block draggable" id="block1_descr" style="width: 200px; top: 270px; left: 10px;">
+<p>Any html element within a canvas can be a block and can be connected with other blocks.
+In this sample we place a <code>h1</code> element into the page as the first block.</p>
+</div>
+
+<div class="connector block1_descr block1_tag">
+	<img class="connector-end" src="../img/arrow.gif">
+</div>
+
+<p class="block draggable" id="block1_class_descr" style="width: 200px; top: 364px; left: 20px;">
+To declare that our <code>h1</code> element is a block, add the <code>block</code> class to it.
 </p>
 
-<div class="connector img_tag_descr start_tag">
-	<img class="connector-end" src="arrow.gif">
+<div class="connector block1_class_descr block1_class">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
-<div class="connector img_tag_descr end_tag">
-	<img class="connector-end" src="arrow.gif">
-</div>
-
-<p class="block draggable" id="src_descr" style="width: 200px; top: 650px; left: 80px;">
-The source of the images must be the original image file.
+<p class="block draggable" id="block1_id_descr" style="width: 200px; top: 520px; left: 610px;">
+A unique id is required and we will use it to refer to the block.
 </p>
 
-<div class="connector src_descr src_1 right_start">
-	<img class="connector-end" src="arrow.gif">
+<div class="connector block1_id_descr block1_id">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
-<div class="connector src_descr src_2 right_start">
-	<img class="connector-end" src="arrow.gif">
+<div class="block draggable" id="block1_size_descr" style="width: 200px; top: 520px; left: 315px;">
+<p>Since we specified absolute positioning for blocks, we need to set the top left corner coordinates for the 
+<code>h1</code> element.</p>
+<p><strong>Note: the <code>top</code> and <code>left</code> styles values for a block are considered relative to 
+the top left corner of the canvas.</strong></p>
 </div>
 
-<p class="block draggable" id="start_descr" style="width: 200px; top: 590px; left: 410px;">
-The <code>connector-start</code> and <code>connector-end</code> classes indicate that the element is to be
-added at the start or the end of the connector, respectively.
+<div class="connector block1_size_descr block1_size">
+	<img class="connector-end" src="../img/arrow.gif">
+</div>
+
+<p class="block draggable" id="block2_descr" style="width: 200px; top: 450px; left: 20px;">
+A second block is a <code>h2</code> element.
 </p>
 
-<div class="connector start_descr start_class right_start left_end">
-	<img class="connector-end" src="arrow.gif">
-</div>
-
-<div class="connector start_descr end_class right_start left_end">
-	<img class="connector-end" src="arrow.gif">
+<div class="connector block2_descr block2_tag">
+	<img class="connector-end" src="../img/arrow.gif">
 </div>
 
 <div class="block draggable" style="bottom: 10px; right: 130px; width: 80px;">
-	<a href="gettingstarted_5.html">&laquo; previous</a></div>
+	<a href="gettingstarted_2.html">&laquo; previous</a></div>
 
 <div class="block draggable" style="bottom: 10px; right: 30px; width: 80px; text-align: right;">
-	<a href="gettingstarted_7.html">next &raquo;</a></div>
+	<a href="gettingstarted_4.html">next &raquo;</a></div>
 				</div>
 			</td>
 		</tr>
