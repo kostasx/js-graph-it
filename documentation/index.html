@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>js-graph.it homepage</title>
-<script type="text/javascript" src="../js/js-graph-it.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/js-graph-it.css" />
-<link rel="stylesheet" type="text/css" href="sf-homepage.css" />
-<script src="menu.js"></script>
+	<meta charset="UTF-8">
+	<title>js-graph.it 2.0</title>
+	<script type="text/javascript" src="../js/js-graph-it.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/js-graph-it.css" />
+	<link rel="stylesheet" type="text/css" href="../css/sf-homepage.css" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,200,500,600,700,800,900' rel='stylesheet' type='text/css'>
+  	<style>* { font-family: 'Raleway', sans-serif; }</style>
 </head>
 <body>
 <table class="main_table" style="height: 100%;">
@@ -19,7 +19,6 @@
 			<td style="vertical-align: top; padding: 0px;">
 				<div id="mainCanvas" class="canvas" style="width: 100%; height: 500px;">
 			
-				</script>
 				<h1 id="title_block" class="block draggable" style="left: 30px; top: 30px;">js-graph.it</h1>
 				<h2 id="subtitle_block" class="block draggable" style="left: 130px; top: 130px;">a javascript library for graphs representation</h2>
 				
@@ -96,98 +95,11 @@
 					<label class="destination-label">...oh!</label>
 				</div>
 				
-				<p class="block" style="position: absolute; bottom: 2px; right: 2px;">tested on Internet Explorer 6, Mozilla Firefox 1.0 and 1.5, Opera 9.01</p>
 				</div>
 			</td>
 		</tr>
 	</table>
-<script>
-
-		var ulElement = document.getElementById("menu");
-
-		onLoad();
-
-		function onLoad()
-		{
-
-			createMenu();
-			setMenu();
-			resizeCanvas();
-			initPageObjects();
-		}
-		
-		/**
-		 * Resizes the main canvas to the maximum visible height.
-		 */
-		function resizeCanvas()
-		{
-			var divElement = document.getElementById("mainCanvas");
-			var screenHeight = window.innerHeight || document.body.offsetHeight;
-			divElement.style.height = (screenHeight - 16) + "px";
-		}
-	
-		function createMenu(){
-
-			for (var i = menuItems.length - 1; i >= 0; i--) {
-
-				var itemMenuLink = document.createElement("a");
-					itemMenuLink.href = menuItems[i][1];
-					itemMenuLink.innerText = menuItems[i][0]; 
-	
-				var itemMenu 	 = document.createElement("li");
-					itemMenu.appendChild(itemMenuLink); 
-
-				ulElement.appendChild( itemMenu );
-
-			};
-
-		}
-
-		/**
-		 * sets the active menu scanning for a menu item which url is a prefix 
-		 * of the one of the current page ignoring file extension.
-		 * Nice trick!
-		 */
-		function setMenu()
-		{
-			var url = document.location.href;
-			// strip extension
-			url = stripExtension(url);
-			
-			var links = ulElement.getElementsByTagName("A");
-			var i;
-			for(i = 0; i < links.length; i++)
-			{
-				if(url.indexOf(stripExtension(links[i].href)) == 0)
-				{
-					links[i].className = "active_menu";
-					return;
-				}
-			}
-		}
-		
-		/**
-		 * Strips the file extension and everything after from a url
-		 */
-		function stripExtension(url)
-		{
-			var lastDotPos = url.lastIndexOf('.');
-			if(lastDotPos > 0)
-				return url.substring(0, lastDotPos - 1);
-			else
-				return url;
-		}
-		
-		/**
-		 * this function opens a popup to show samples during explanations.
-		 */
-		function openSample(url)
-		{
-			var popup = window.open(url, "sampleWindow", "width=400,height=300");
-			popup.focus();
-			return false;
-		}
-	//-->
-</script>
+<script src="../js/menu.js"></script>
+<script src="../js/init.js"></script>
 </body>
 </html>

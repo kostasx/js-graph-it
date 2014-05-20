@@ -1,0 +1,157 @@
+.draggable
+{
+	position: absolute;
+}
+
+div.block, h1.block, h2.block, p.block
+{
+	border: 2px solid #FFF;
+	padding: 15px;
+	color: #FFF;
+}
+
+div.canvas
+{
+	background-color: #008185;
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding: 0px;	
+}
+
+.highlighter
+{
+	border: 1px solid #25ADB6 !important;
+	background-color: #25ADB6 !important;
+	margin-bottom: 2px !important;
+	padding: 0px !important;
+	z-index: 3;
+}
+
+.highlighter .highlighter
+{
+	border: 1px solid #3B7392 !important;
+	background-color: #3B7392 !important;
+	margin-left: 2px !important;
+	margin-right: 2px !important;
+}
+
+
+html
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+body
+{
+	font-family: verdana;
+	font-size: 11px;
+	color: #33333F;
+	padding: 3px;
+	margin: 0px;
+	background-color: #008185;
+}
+
+h1
+{
+	color: #FF7521;
+	margin: 0px;
+	font-size: 20px;
+}
+
+h2
+{
+	font-size: 15px;
+	margin: 0px;
+}
+
+p, div
+{
+	font-size: 11px;
+	margin: 0px;
+}
+
+a
+{
+	text-decoration: none;
+	color: #25ADB6;
+}
+
+.middle-label, .source-label, .destination-label
+{
+	font-size: 11px;
+	font-weight: bold;
+	padding: 5px;
+	color: #25ADB6;
+}
+
+div.connector
+{
+	background-color: white;
+	z-index: 1000;
+}
+
+table.main_table 
+{
+	width: 100%; 
+	border-collapse: separate;
+	border: none;
+}
+	
+td.menu
+{
+	padding: 5px;
+}
+
+.menu ul
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	list-style-position: outside;
+}
+
+.menu li
+{
+	border: none;
+	padding: 0px;
+	font-size: 12px;
+	margin-bottom: 3px;
+}
+
+.menu li a
+{
+	display: block;
+	border: 1px solid #fff;
+	width: 100px;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+}
+
+.menu li a.active_menu
+{
+	color: #25ADB6;
+	border-color: #25ADB6;
+}
+
+.menu li a:hover
+{
+	color: #FF9900;
+	border-color: #FF9900;
+}
+
+.block ol, .block ul
+{
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+	padding-left: 25px;
+}
+
+.code
+{
+	font-family: monospace;
+	line-height: 1.5em !important;
+	background-color: #008185;
+}
